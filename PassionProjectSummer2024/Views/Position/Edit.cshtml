@@ -1,0 +1,58 @@
+﻿@model PassionProjectSummer2024.Models.ViewModels.UpdatePosition
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Position</h2>
+<br />
+<form action="/Position/Update/@Model.SelectedPosition.PositionId" method="POST">
+    <div>
+        <label>Position Title : </label> <input type="text" name="PositionTitle" value="@Model.SelectedPosition.PositionTitle" />
+    </div>
+    <div>
+        <label>Hourly Wage :$</label> <input type="number" name="HourlyWage" step="0.01" min="0" placeholder="50.00" value="@Model.SelectedPosition.HourlyWage" />
+    </div>
+    <div style="display:none;">
+        <label>Position Id</label> <input type="number" name="PositionId" value="@Model.SelectedPosition.PositionId" />
+    </div>
+    <div>
+        <input type="submit" value="Update Position" style="background-color:orangered; color:white" />
+
+    </div>
+</form>
+<div>
+    <h3>List of Emplpoyees holding this position</h3>
+    @foreach (var employee in Model.RelatedEmployees)
+    {
+        if (employee.PreviousPositionId == 0 || employee.PreviousPositionId == employee.PositionId)
+        {
+            <div style="color:dimgrey">@employee.FirstName @employee.LastName <span style="color:black"> - Cannot Cancel</span> </div>
+
+        }
+        else
+        {
+            <a href="/Employee/Details/@employee.EmployeeId">@employee.FirstName @employee.LastName</a> <a href="/Position/UnAssociate/@Model.SelectedPosition.PositionId?EmployeeId=@employee.EmployeeId" style="color:red">- Cancel</a>
+            <br />}
+
+    }
+    <br />
+    <p style="color:red; background:lightyellow; padding: 4px">NOTE : Employees who has @Model.SelectedPosition.PositionTitle as thier first assigned Position, they cannot be unassociated from this  position throught this page , Please visit  update Employee Page to change their  Position</p>
+</div>
+<br/>
+<div>
+    <h3>Add employees to this Position- @Model.SelectedPosition.PositionTitle</h3>
+    <form method="post" action="/Position/Associate/@Model.SelectedPosition.PositionId">
+        <select name="EmployeeId">
+            @foreach (var employee in Model.UnrelatedEmployees)
+            {
+                <option value="@employee.EmployeeId">
+                    @employee.FirstName @employee.LastName
+                </option>
+                <br />
+
+            }
+        </select>
+        <input type="submit" value="Add Employee" style="background-color:orangered; color:white" />
+    </form>
+
+</div>

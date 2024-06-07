@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add New Department</h2>
+<a href="/Department/List">Go back to List</a>
+<br />
+<br />
+<form action="/Department/Create" method="POST">
+    <div>
+        <label>Department Name : </label> <input type="text" name="DepartmentName" />
+    </div>
+    <div>
+        <label>Department Manager : </label> <input type="text" name="DepartmentManager" />
+    </div>
+    <div>
+        <label>Department Id</label> <input type="number" name="DepartmentId" />
+    </div>
+    <div>
+        <input type="submit" value="Add Department" style="background-color:darkgreen; color:white" />
+
+    </div>
+</form>
+

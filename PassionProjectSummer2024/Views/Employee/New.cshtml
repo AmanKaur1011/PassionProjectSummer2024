@@ -1,0 +1,53 @@
+﻿﻿@model PassionProjectSummer2024.Models.ViewModels.AddEmployee
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Add New Employee</h2>
+<a href="/Employee/List">Go back to List</a>
+<br />
+<br />
+<form action="/Employee/Create" method="POST">
+    <div>
+        <label>First Name: </label> <input type="text" name="FirstName" />
+    </div>
+    <div>
+        <label>Last Name: </label> <input type="text" name="LastName" />
+    </div>
+    <div>
+        <label>Hire Date</label> <input type="date" name="HireDate" />
+    </div>
+    <div>
+        <label>Department</label>
+        <select name="DepartmentId">
+            @foreach (var department in Model.DepartmentOptions)
+            {
+                <option value="@department.DepartmentId">@department.DepartmentName</option>
+
+            }
+        </select>
+
+
+    </div>
+
+    <div>
+        <label>Position</label>
+        <select name="PositionId">
+            @foreach (var position in Model.PositionOptions)
+            {
+                <option value="@position.PositionId">@position.PositionTitle</option>
+
+            }
+        </select>
+
+
+    </div>
+    <!--<div>
+        <label>Position</label> <input type="number" name="PositionId" />
+    </div>-->
+    <div>
+        <input type="submit" value="Add Employee" style="background-color:darkgreen; color:white"/>
+
+    </div>
+</form>
+

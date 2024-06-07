@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PassionProjectSummer2024.Models.EmployeeDto>
+@{
+    ViewBag.Title = "List";
+}
+<style>
+
+    .button {
+        display: inline-block;
+        padding: 8px 18px;
+        font-size: 16px;
+        color: white;
+        background-color: blue;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+        .button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+ </style>
+<h2>List of employees</h2>
+<br />
+<h5><a href="/Employee/New" class="button">New Employee </a></h5>
+
+@foreach(var employee  in Model)
+  {<div>
+    <p><a href="/Employee/Details/@employee.EmployeeId">@employee.FirstName @employee.LastName</a></p>
+</div>
+  }
+

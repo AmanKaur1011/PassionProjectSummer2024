@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PassionProjectSummer2024.Models.PositionDto>
+@{
+    ViewBag.Title = "List";
+}
+<style>
+    
+    .button {
+        display: inline-block;
+        padding: 8px 18px;
+        font-size: 16px;
+        color: white;
+        background-color: blue;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+        .button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+</style>
+<h2>List of Positions</h2>
+<br />
+<h5><a href="/Position/New" class="button">New Position </a></h5>
+
+@foreach (var position in Model)
+{<div>
+        <p><a href="/Position/Details/@position.PositionId">@position.PositionTitle </a></p>
+    </div>
+}
+

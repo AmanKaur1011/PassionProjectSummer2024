@@ -1,0 +1,8 @@
+﻿{
+    "EmployeeId" :  9,
+    "FirstName": "Manpreet",
+    "LastName": "Singh",
+    "HireDate": "2022-06-09 12:00:00",
+    "DepartmentId": 1,
+    "PositionId": 1
+}

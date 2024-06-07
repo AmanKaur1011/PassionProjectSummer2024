@@ -1,0 +1,6 @@
+﻿{
+    "DepartmentId" :  3,
+    "DepartmentName": "Outbound Pick",
+    "DepartmentManager": "Hani Patel",
+    "NoOfEmployees": 4
+}

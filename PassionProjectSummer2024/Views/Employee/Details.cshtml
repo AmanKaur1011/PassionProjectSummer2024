@@ -1,0 +1,35 @@
+﻿@model PassionProjectSummer2024.Models.EmployeeDto
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+
+    .button {
+        display: inline-block;
+        padding: 8px 18px;
+        font-size: 16px;
+        color: white;
+        background-color: blue;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+        .button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+</style>
+<h2>Employee Details</h2>
+<br />
+<a href="/Employee/List">Go back to List</a><br /><br />
+<a href="/Employee/DeleteConfirm/@Model.EmployeeId" class="button">Delete Employee</a>
+<a href="/Employee/Edit/@Model.EmployeeId" class="button" style="margin-left:10px;margin-bottom:5px">Update Employee</a><br />
+<div>
+    <p><strong>First Name : </strong>@Model.FirstName </p>
+    <p><strong>Last Name : </strong>@Model.LastName </p>
+    <p><strong>Employee Id : </strong>@Model.EmployeeId </p>
+    <p><strong>Hire Date : </strong>@Model.HireDate </p>
+    <p><strong>Department Name : </strong>@Model.DepartmentName </p>
+    <p><strong>Position Title : </strong>@Model.PositionTitle </p>
+</div>

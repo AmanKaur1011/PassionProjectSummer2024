@@ -1,0 +1,46 @@
+﻿@model PassionProjectSummer2024.Models.ViewModels.DetailsPosition
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+
+    .button {
+        display: inline-block;
+        padding: 8px 18px;
+        font-size: 16px;
+        color: white;
+        background-color: blue;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+        .button:hover {
+            background-color: darkblue;
+            color: white;
+        }
+</style>
+<h2>Position Details</h2>
+<br />
+<a href="/Position/List">Go back to List</a>
+<br />
+<br />
+<a href="/Position/DeleteConfirm/@Model.SelectedPosition.PositionId" class="button">Delete Position</a>
+<a href="/Position/Edit/@Model.SelectedPosition.PositionId" class="button" style="margin-left:10px;margin-bottom:5px">Update Position</a>
+<br />
+<div>
+    <p><strong>Position Title : </strong>@Model.SelectedPosition.PositionTitle </p>
+    <p><strong>Hourly Wage : $</strong>@Model.SelectedPosition.HourlyWage </p>
+    <p><strong>Position Id : </strong>@Model.SelectedPosition.PositionId </p>
+</div>
+<div>
+    <h3>List of Emplpoyees holding this position</h3>
+    @foreach (var employee in Model.RelatedEmployees)
+    {
+        <a href="/Employee/Details/@employee.EmployeeId">@employee.FirstName @employee.LastName</a>
+        <br />
+
+    }
+
+
+</div>

@@ -1,0 +1,73 @@
+﻿@model PassionProjectSummer2024.Models.ViewModels.UpdateEmployee
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Employee</h2>
+<br />
+<form action="/Employee/Update/@Model.SelectedEmployee.EmployeeId" method="POST">
+    <div style="display:none;">
+        <label>Employee Id: </label> <input type="number" name="EmployeeId" value="@Model.SelectedEmployee.EmployeeId" />
+    </div>
+    <div>
+        <label>First Name: </label> <input type="text" name="FirstName" value="@Model.SelectedEmployee.FirstName" />
+    </div>
+    <div>
+        <label>Last Name: </label> <input type="text" name="LastName" value="@Model.SelectedEmployee.LastName" />
+    </div>
+    <div>
+        <label>Hire Date</label> <input type="date" name="HireDate" value="@Model.SelectedEmployee.HireDate.ToString("yyyy-MM-dd")" />
+    </div>
+    <div style="display:none;">
+        <label>Previous Department Id</label> <input type="number" name="PreviousDepartmentId" value="@Model.SelectedEmployee.PreviousDepartmentId" />
+    </div>
+    <div style="display:none;">
+        <label>Previous Position Id</label> <input type="number" name="PreviousPositionId" value="@Model.SelectedEmployee.PreviousPositionId" />
+    </div>
+
+    <div>
+        <label>Department</label>
+        <select name="DepartmentId">
+            @foreach (var department in Model.DepartmentOptions)
+            {
+                string selected = "";
+                if (department.DepartmentId == Model.SelectedEmployee.DepartmentId)
+                {
+                    selected = "selected";
+                }
+                <option value="@department.DepartmentId" @selected>@department.DepartmentName</option>
+
+            }
+        </select>
+
+
+    </div>
+
+    <div>
+        <label>Position</label>
+        <select name="PositionId">
+            @foreach (var position in Model.PositionOptions)
+            {
+                string selected = "";
+                if (position.PositionId == Model.SelectedEmployee.PositionId)
+                {
+                    selected = "selected";
+                }
+                <option value="@position.PositionId" @selected>@position.PositionTitle</option>
+
+            }
+        </select>
+
+
+    </div>
+
+    <!-- <div>
+         <label>Position</label> <input type="number" name="PositionId" value="@Model.SelectedEmployee.PositionId" />
+     </div>-->
+    <div>
+        <input type="submit" value="Update Employee" style="background-color:orangered; color:white" />
+
+    </div>
+    <p>Previous DepartmentId: @Model.SelectedEmployee.PreviousDepartmentId</p>
+</form>
+

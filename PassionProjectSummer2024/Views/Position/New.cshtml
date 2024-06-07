@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+
+<h2>Add New Position</h2>
+<a href="/Position/List">Go back to List</a>
+<br />
+<br />
+<form action="/Position/Create" method="POST">
+    <div>
+        <label>Position Title : </label> <input type="text" name="PositionTitle" />
+    </div>
+    <div>
+        <label>Hourly Wage :$</label> <input type="number" name="HourlyWage" step="0.01" min="0" placeholder="50.00" />
+    </div>
+    <div>
+        <label>Position Id</label> <input type="number" name="PositionId" disabled />
+    </div>
+    <div>
+        <input type="submit" value="Add Position" style="background-color:darkgreen; color:white"  />
+
+    </div>
+</form>
+
