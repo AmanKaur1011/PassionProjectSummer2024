@@ -9,9 +9,9 @@ current employee information and can also delete the previous employees. Similar
 department information, or update the current Position details like updating the wage associated with the position, and can also delete the old departments and positions.
 
 ### Basic Features of the system:
-- Create, read, update, and delete functionality for the employees by the Administrator only.
-- Create, read, update, and delete functionality for the departments by the Administrator only.
-- Create, read, update, and delete functionality for the Positions by the Administrator only.
+- Create, read, update, and delete functionality for the employees.
+- Create, read, update, and delete functionality for the departments.
+- Create, read, update, and delete functionality for the Positions.
 
 ## ERD Diagram 
 ![ERD with colored entities (UML notation) (3)](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/bb2f3a18-4919-4cf1-a7b3-8e0283d7fe9b)
