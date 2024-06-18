@@ -22,23 +22,36 @@ department information, or update the current Position details like updating the
 
 
 #### Interface to update and delete an employee 
-![Screenshot 2024-06-18 010204](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/13df3901-cc79-4a55-a1e2-d46204d12ccb)
-![Screenshot 2024-06-18 010216](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/5889ae65-14ff-4cab-922a-05a6736803b4)
-![Screenshot 2024-06-18 010404](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/49b13211-b1ce-41e1-ad3a-0040054390ec)
+![Screenshot 2024-06-18 010420](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/602460f8-3b43-40d3-95bd-9ed4488a8a88)
+
+![Screenshot 2024-06-18 010355](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/b3d727a0-2506-4983-b61b-a74e0a584969)
+
+![Screenshot 2024-06-18 010404](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/662dbf3c-b5ac-4e91-9fcf-5e826a0235a9)
+
+
+
 
 #### Interface to add an employee to the system
-![Screenshot 2024-06-18 010146](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/935d899d-e8fa-4a32-be29-5bfb881dd224)
+![Screenshot 2024-06-18 010345](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/3a52cc73-900c-4dd7-9e37-038e67c8a671)
+
 
 #### Interface showing Department Details with the number of employees in that department
-![Screenshot 2024-06-18 010420](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/437e85a0-fe6e-4180-a6c7-adbb0de4253b)
+
+![Screenshot 2024-06-18 010420](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/01421604-fae2-4105-b5d1-3616201e5d13)
+
 
 #### Interface to Update a departmet where employees can be added and deleted to the department
-![Screenshot 2024-06-18 010457](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/4dcd9864-e7ed-4451-8868-ab8e54fe8998)
-![Screenshot 2024-06-18 010510](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/5105f972-211a-4a42-95bd-8c1c40588848)
-![Screenshot 2024-06-18 010521](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/076de308-4500-44bb-8311-1247110dadf0)
+![Screenshot 2024-06-18 010457](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/7d87369f-4832-4e64-a8e9-46dcb0e4d007)
+
+![Screenshot 2024-06-18 010510](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/7f032df3-b4e5-4ede-bf27-1f8dea493962)
+
+![Screenshot 2024-06-18 010521](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/1263b218-86ed-4aec-8474-b7df6ce6ad01)
+
 
 #### Similar interface for Position Entity's update and delete functionality
-![Screenshot 2024-06-18 010537](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/2cc6026b-9106-4189-9bde-36bd07eea4a4)
+
+![Screenshot 2024-06-18 010537](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/9be60d40-c1bf-42a5-91c4-58f104731fb7)
+
 ![Screenshot 2024-06-18 010559](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/0b5eec95-b9eb-4dd3-adac-fffe291e0f4a)
 
 
