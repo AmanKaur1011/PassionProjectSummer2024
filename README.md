@@ -22,7 +22,8 @@ department information, or update the current Position details like updating the
 
 
 #### Interface to update and delete an employee 
-![Screenshot 2024-06-18 010420](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/602460f8-3b43-40d3-95bd-9ed4488a8a88)
+
+![Screenshot 2024-06-18 010204 (1)](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/b5d6c485-896f-423a-b7e1-8d8735a3429d)
 
 ![Screenshot 2024-06-18 010355](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/b3d727a0-2506-4983-b61b-a74e0a584969)
 
