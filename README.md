@@ -18,7 +18,7 @@ department information, or update the current Position details like updating the
 
 ## Interface Snippets
 #### Interface showing List of employees 
-![Screenshot 2024-06-18 010334](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/3a276693-b71a-4751-8d29-29a4c8903747)
+![Screenshot 2024-06-18 010334](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/3a276693-b71a-4751-8d29-29a4c8903747 | width= 100)
 
 #### Interface to update and delete an employee 
 ![Screenshot 2024-06-18 010204](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/13df3901-cc79-4a55-a1e2-d46204d12ccb)
