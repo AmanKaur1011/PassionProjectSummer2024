@@ -39,7 +39,8 @@ department information, or update the current Position details like updating the
 
 #### Similar interface for Position Entity's update and delete functionality
 ![Screenshot 2024-06-18 010537](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/2cc6026b-9106-4189-9bde-36bd07eea4a4)
-![Screenshot 2024-06-18 010559](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/7287efb6-cbb7-4a0c-b8b4-75e2e13458b2)
+![Screenshot 2024-06-18 010559](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/0b5eec95-b9eb-4dd3-adac-fffe291e0f4a)
+
 
 
 
