@@ -2,31 +2,22 @@
 @{
     ViewBag.Title = "List";
 }
-<style>
-    
-    .button {
-        display: inline-block;
-        padding: 8px 18px;
-        font-size: 16px;
-        color: white;
-        background-color: blue;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-    }
 
-        .button:hover {
-            background-color: darkblue;
-            color: white;
+<h2  class="text-center display-4">List of Positions</h2>
+
+<h5><a class="mb-5 btn btn-primary" href="/Position/New" >New Position </a></h5>
+<div class="container">
+    <div class="row">
+        @foreach (var position in Model)
+        {
+            <div class="col-md-4 mt-2 mb-2 ">
+                <div class="card bg-primary-subtle text-center border border-primary-subtle shadow p-3 mb-5 bg-body-tertiary rounded ">
+                    <div class="card-body">
+                        <p><a class="p-3 fs-4 text-primary-emphasis fw-m link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/Position/Details/@position.PositionId">@position.PositionTitle </a></p>
+                    </div>
+                </div>
+            </div>
         }
-</style>
-<h2>List of Positions</h2>
-<br />
-<h5><a href="/Position/New" class="button">New Position </a></h5>
-
-@foreach (var position in Model)
-{<div>
-        <p><a href="/Position/Details/@position.PositionId">@position.PositionTitle </a></p>
     </div>
-}
+</div>
 
