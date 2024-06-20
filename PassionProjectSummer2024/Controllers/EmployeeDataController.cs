@@ -551,6 +551,7 @@ namespace PassionProjectSummer2024.Controllers
         /// </example>
         [ResponseType(typeof(Employee))]
         [System.Web.Http.HttpPost]
+        [System.Web.Http.Authorize]
         public IHttpActionResult AddEmployee(Employee employee)
         {
             Debug.WriteLine("Addemployeeaccessed");
