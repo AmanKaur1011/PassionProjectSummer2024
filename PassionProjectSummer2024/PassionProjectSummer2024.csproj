@@ -253,6 +253,14 @@
     <Compile Include="Migrations\202406050616113_PreviousPositionId.designer.cs">
       <DependentUpon>202406050616113_PreviousPositionId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406200334463_added authentication.cs" />
+    <Compile Include="Migrations\202406200334463_added authentication.designer.cs">
+      <DependentUpon>202406200334463_added authentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406200340263_changes2.cs" />
+    <Compile Include="Migrations\202406200340263_changes2.designer.cs">
+      <DependentUpon>202406200340263_changes2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Department.cs" />
@@ -437,6 +445,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202406050616113_PreviousPositionId.resx">
       <DependentUpon>202406050616113_PreviousPositionId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406200334463_added authentication.resx">
+      <DependentUpon>202406200334463_added authentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406200340263_changes2.resx">
+      <DependentUpon>202406200340263_changes2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
