@@ -16,6 +16,20 @@ department information, or update the current Position details like updating the
 ## ERD Diagram 
 ![ERD with colored entities (UML notation) (3)](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/bb2f3a18-4919-4cf1-a7b3-8e0283d7fe9b)
 
+## Challenges Faced:
+Incorporating the  Update interface in the Department and position where employees can directly be added to that department or position  was challenging 
+as I have a One-to-many relationship between employee and department entities as well as in employee and position entities. So, keeping track of the previous  department ID  and position ID was a bit hard. Eventually, It was successfully incorporated into this passion project.
+
+## Extra Feature Incorporated:
+- Authentication is added as the extra feature to this passion project to give the critical functionalities access(like create, update, and delete ) only to authenticated 
+  users.
+- Using Images, styling, and responsive behavior 
+
+## Features to explore in the Future:
+- Search Functionality to search employees by adding a particular name, hire date, position, or department name in the search bar
+- Adding the cross-training portal as a separate entity that can keep track of the employees who are cross-trained in other departments. So, when the employee 
+  information is shown it also shows what other departments, they are cross -trained.
+
 ## Interface Snippets
 ### Interface for the Home Page with a Carousel
 ![Screenshot 2024-06-21 033240 (1)](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/f517eedb-b04e-4459-bffd-1fd771ec4196)
@@ -38,21 +52,17 @@ department information, or update the current Position details like updating the
 ![Screenshot 2024-06-21 033513](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/6dbfc261-a900-45c2-93c0-2e34a431619c)
 <hr/>
 
-
-
 ### Interface to add an employee to the system
 ![Screenshot 2024-06-21 033322](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/a580ce7f-cf12-4640-b878-83b6d30017b4)
 
 <hr>
 
 ### Interface showing the list of departments in the system
-
+![Screenshot 2024-06-21 033521](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/8b0cfac1-bf9e-4b96-8b27-572b6c1dcde5)
 <hr>
 
 ### Interface showing Department Details with the number of employees in that department
 ![Screenshot 2024-06-21 033545](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/5a56ebe8-b464-4069-9ca9-5f6418a16266)
-
-![Screenshot 2024-06-21 033521](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/8b0cfac1-bf9e-4b96-8b27-572b6c1dcde5)
 
 <hr>
 
@@ -69,10 +79,6 @@ department information, or update the current Position details like updating the
 ### Similar interface for Position Entity's Update functionality
 
 ![Screenshot 2024-06-21 033620](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/81878a1f-d3d9-42b5-9019-92f57c99f2c7)
-
-
-
-
 
 
 
