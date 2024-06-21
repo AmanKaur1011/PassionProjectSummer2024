@@ -18,6 +18,8 @@ department information, or update the current Position details like updating the
 
 ## Interface Snippets
 ### Interface showing List of employees
+![Screenshot 2024-06-21 033240](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/0a5ee456-d4e2-499c-83eb-52b29c0e3377)
+
 ![Screenshot 2024-06-18 010334](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/d8d7acbd-d7ef-4fd7-86ab-f510d32e62e9)
 <hr>
 
