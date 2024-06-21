@@ -17,11 +17,12 @@ department information, or update the current Position details like updating the
 ![ERD with colored entities (UML notation) (3)](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/bb2f3a18-4919-4cf1-a7b3-8e0283d7fe9b)
 
 ## Interface Snippets
-### Interface showing List of employees 
+### Interface showing List of employees
 ![Screenshot 2024-06-18 010334](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/d8d7acbd-d7ef-4fd7-86ab-f510d32e62e9)
 <hr>
 
 ### Interface to update and delete an employee 
+![Screenshot 2024-06-21 033240](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/8b7db5d1-92b0-4720-b18a-bf5ca24a028e)
 
 ![Screenshot 2024-06-18 010204 (1)](https://github.com/AmanKaur1011/PassionProjectSummer2024/assets/156178926/b5d6c485-896f-423a-b7e1-8d8735a3429d)
 <hr>
