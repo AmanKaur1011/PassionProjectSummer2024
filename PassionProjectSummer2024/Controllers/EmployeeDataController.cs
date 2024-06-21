@@ -285,6 +285,7 @@ namespace PassionProjectSummer2024.Controllers
         /// </example>
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/EmployeeData/AssociateEmployeeToDepartment/{EmployeeId}/{DepartmentId}")]
+        [System.Web.Http.Authorize]
         public IHttpActionResult AssociateEmployeeToDepartment(int EmployeeId, int DepartmentId)
         {
             Debug.WriteLine("EmployeeId"+EmployeeId);
@@ -329,6 +330,7 @@ namespace PassionProjectSummer2024.Controllers
 
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/EmployeeData/AssociateEmployeeToPosition/{EmployeeId}/{PositionId}")]
+        [System.Web.Http.Authorize]
         public IHttpActionResult AssociateEmployeeToPosition(int EmployeeId, int PositionId)
         {
             Debug.WriteLine("EmployeeId" + EmployeeId);
@@ -371,6 +373,7 @@ namespace PassionProjectSummer2024.Controllers
         /// </example>
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/EmployeeData/UnAssociateEmployeeToDepartment/{EmployeeId}")]
+        [System.Web.Http.Authorize]
         public IHttpActionResult UnAssociateEmployeeToDepartment(int EmployeeId)
         {
             Debug.WriteLine("EmployeeId" + EmployeeId);
@@ -416,6 +419,7 @@ namespace PassionProjectSummer2024.Controllers
 
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("api/EmployeeData/UnAssociateEmployeeToPosition/{EmployeeId}")]
+        [System.Web.Http.Authorize]
         public IHttpActionResult UnAssociateEmployeeToPosition(int EmployeeId)
         {
             Debug.WriteLine("EmployeeId" + EmployeeId);
@@ -503,6 +507,7 @@ namespace PassionProjectSummer2024.Controllers
         /// </example>
         [ResponseType(typeof(void))]
         [System.Web.Http.HttpPost]
+        [System.Web.Http.Authorize]
         public IHttpActionResult UpdateEmployee(int id, Employee employee)
         {
             if (!ModelState.IsValid)
@@ -552,7 +557,7 @@ namespace PassionProjectSummer2024.Controllers
         /// </example>
         [ResponseType(typeof(Employee))]
         [System.Web.Http.HttpPost]
-        
+        [System.Web.Http.Authorize]
         public IHttpActionResult AddEmployee(Employee employee)
         {
             Debug.WriteLine("Addemployeeaccessed");
@@ -584,6 +589,7 @@ namespace PassionProjectSummer2024.Controllers
         //
         [ResponseType(typeof(Employee))]
         [System.Web.Http.HttpPost]
+        [System.Web.Http.Authorize]
         public IHttpActionResult DeleteEmployee(int id)
         {
             Employee employee = db.Employees.Find(id);

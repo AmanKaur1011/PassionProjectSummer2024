@@ -8,19 +8,26 @@
 <a href="/Position/List">Go back to List</a>
 <br />
 <br />
-<form action="/Position/Create" method="POST">
-    <div>
-        <label>Position Title : </label> <input type="text" name="PositionTitle" />
-    </div>
-    <div>
-        <label>Hourly Wage :$</label> <input type="number" name="HourlyWage" step="0.01" min="0" placeholder="50.00" />
-    </div>
-    <div>
-        <label>Position Id</label> <input type="number" name="PositionId" disabled />
-    </div>
-    <div>
-        <input type="submit" value="Add Position" style="background-color:darkgreen; color:white"  />
+<div class="container-fluid">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form action="/Position/Create" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Position Title : </label> <input type="text" class="form-control" name="PositionTitle" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Hourly Wage :$</label> <input type="number" class="form-control" name="HourlyWage" step="0.01" min="0" placeholder="50.00" />
+                    </div>
+                    <div class="mb-3 d-none">
+                        <label class="form-label">Position Id</label> <input type="number" class="form-control" name="PositionId" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" value="Add Position" class="btn btn-success"  />
 
-    </div>
-</form>
-
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+</div>

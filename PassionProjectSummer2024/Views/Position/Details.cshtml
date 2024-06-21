@@ -3,44 +3,43 @@
     ViewBag.Title = "Details";
 }
 <style>
-
-    .button {
-        display: inline-block;
-        padding: 8px 18px;
-        font-size: 16px;
-        color: white;
-        background-color: blue;
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
+    .image-overlay {
+        position: relative;
+        bottom: -30px;
+        z-index: 10;
     }
-
-        .button:hover {
-            background-color: darkblue;
-            color: white;
-        }
 </style>
-<h2>Position Details</h2>
-<br />
-<a href="/Position/List">Go back to List</a>
-<br />
-<br />
-<a href="/Position/DeleteConfirm/@Model.SelectedPosition.PositionId" class="button">Delete Position</a>
-<a href="/Position/Edit/@Model.SelectedPosition.PositionId" class="button" style="margin-left:10px;margin-bottom:5px">Update Position</a>
-<br />
-<div>
-    <p><strong>Position Title : </strong>@Model.SelectedPosition.PositionTitle </p>
-    <p><strong>Hourly Wage : $</strong>@Model.SelectedPosition.HourlyWage </p>
-    <p><strong>Position Id : </strong>@Model.SelectedPosition.PositionId </p>
-</div>
-<div>
-    <h3>List of Emplpoyees holding this position</h3>
-    @foreach (var employee in Model.RelatedEmployees)
-    {
-        <a href="/Employee/Details/@employee.EmployeeId">@employee.FirstName @employee.LastName</a>
-        <br />
+<h2 class="text-center display-4">Position Details</h2>
 
-    }
+<a class="d-inline-flex focus-ring py-1 px-2 text-decoration-none border rounded-2 mb-4" href="/Position/List">Go back to List</a>
+<br />
+<span>
+    <a class="btn btn-danger me-3" href="/Position/DeleteConfirm/@Model.SelectedPosition.PositionId">Delete Position</a>
+    <a class="btn btn-warning" href="/Position/Edit/@Model.SelectedPosition.PositionId">Update Position</a>
+
+    <img src="~/Content/Images/Peccy600.png" class="rounded float-end image-overlay" />
+</span>
+<div class="container-fluid  p-5 d-inline-block text-start text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+    <div class="container ">
+        <div class="row justify-content-between ">
+
+            <div class="col">
+                <p class="mb-2 fs-4"><strong>Position Title : </strong>@Model.SelectedPosition.PositionTitle </p>
+                <p class="mb-2 fs-4"><strong>Hourly Wage : $</strong>@Model.SelectedPosition.HourlyWage </p>
+                <p class="mb-2 fs-4"><strong>Position Id : </strong>@Model.SelectedPosition.PositionId </p>
+            </div>
+
+            <div class="col">
+                <h3>List of Employees holding this position</h3>
+                @foreach (var employee in Model.RelatedEmployees)
+                {
+                    <a class=" fs-5 link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/Employee/Details/@employee.EmployeeId">@employee.FirstName @employee.LastName</a>
+                    <br />
+
+                }
 
 
+            </div>
+        </div>
+    </div>
 </div>

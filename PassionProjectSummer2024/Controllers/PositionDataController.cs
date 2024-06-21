@@ -107,6 +107,7 @@ namespace PassionProjectSummer2024.Controllers
         // PUT: api/PositionData/UpdatePosition/5
         [System.Web.Http.HttpPost]
         [ResponseType(typeof(void))]
+        [System.Web.Http.Authorize]
         public IHttpActionResult UpdatePosition(int id, Position position)
         {
             if (!ModelState.IsValid)
@@ -159,6 +160,7 @@ namespace PassionProjectSummer2024.Controllers
         // POST: api/PositionData/AddPosition
         [System.Web.Http.HttpPost]
         [ResponseType(typeof(Position))]
+        [System.Web.Http.Authorize]
         public IHttpActionResult AddPosition(Position position)
         {
             if (!ModelState.IsValid)
@@ -189,6 +191,7 @@ namespace PassionProjectSummer2024.Controllers
         // DELETE: api/PositionData/DeletePosition/5
         [System.Web.Http.HttpPost]
         [ResponseType(typeof(Position))]
+        [System.Web.Http.Authorize]
         public IHttpActionResult DeletePosition(int id)
         {
             Position position = db.Positions.Find(id);

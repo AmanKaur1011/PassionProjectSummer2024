@@ -107,6 +107,7 @@ namespace PassionProjectSummer2024.Controllers
 
         [HttpPost]
         [ResponseType(typeof(void))]
+        [System.Web.Http.Authorize]
         public IHttpActionResult UpdateDepartment(int id, Department department)
         {
             if (!ModelState.IsValid)
@@ -158,6 +159,7 @@ namespace PassionProjectSummer2024.Controllers
 
         [HttpPost]
         [ResponseType(typeof(Department))]
+        [System.Web.Http.Authorize]
         public IHttpActionResult AddDepartment(Department department)
         {
             if (!ModelState.IsValid)
@@ -190,6 +192,7 @@ namespace PassionProjectSummer2024.Controllers
 
         [HttpPost]
         [ResponseType(typeof(Department))]
+        [System.Web.Http.Authorize]
         public IHttpActionResult DeleteDepartment(int id)
         {
             Department department = db.Departments.Find(id);

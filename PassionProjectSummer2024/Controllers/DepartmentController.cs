@@ -20,8 +20,42 @@ namespace PassionProjectSummer2024.Controllers
 
         static DepartmentController()
         {
-            client = new HttpClient();
+            HttpClientHandler handler = new HttpClientHandler()
+            {
+                AllowAutoRedirect = false,
+                //cookies are manually set in RequestHeader
+                UseCookies = false
+            };
+            client = new HttpClient(handler);
             client.BaseAddress = new Uri("https://localhost:44355/api/");
+        }
+
+
+        /// <summary>
+        /// Grabs the authentication cookie sent to this controller.
+        /// For proper WebAPI authentication, you can send a post request with login credentials to the WebAPI and log the access token from the response. The controller already knows this token, so we're just passing it up the chain.
+        /// 
+        /// Here is a descriptive article which walks through the process of setting up authorization/authentication directly.
+        /// https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/individual-accounts-in-web-api
+        /// </summary>
+        private void GetApplicationCookie()
+        {
+            string token = "";
+            //HTTP client is set up to be reused, otherwise it will exhaust server resources.
+            //This is a bit dangerous because a previously authenticated cookie could be cached for
+            //a follow-up request from someone else. Reset cookies in HTTP client before grabbing a new one.
+            client.DefaultRequestHeaders.Remove("Cookie");
+            if (!User.Identity.IsAuthenticated) return;
+
+            HttpCookie cookie = System.Web.HttpContext.Current.Request.Cookies.Get(".AspNet.ApplicationCookie");
+            if (cookie != null) token = cookie.Value;
+
+            //collect token as it is submitted to the controller
+            //use it to pass along to the WebAPI.
+            Debug.WriteLine("Token Submitted is : " + token);
+            if (token != "") client.DefaultRequestHeaders.Add("Cookie", ".AspNet.ApplicationCookie=" + token);
+
+            return;
         }
 
 
@@ -88,9 +122,9 @@ namespace PassionProjectSummer2024.Controllers
 
             return View(ViewModel);
         }
-        
+
         ///GET: Department/New => New View => (this webpage gives a form with an empty input fields where new department's information can be filled)
-        
+        [Authorize]
         public ActionResult New()
         {
             return View();
@@ -110,9 +144,10 @@ namespace PassionProjectSummer2024.Controllers
 
         // GET: Department/Create
         [HttpPost]
+        [Authorize]
         public ActionResult Create(Department department)
         {
-           
+            GetApplicationCookie();
 
             string url = "DepartmentData/AddDepartment";
 
@@ -150,8 +185,10 @@ namespace PassionProjectSummer2024.Controllers
         //POST: Department/Associate/{DepartmentId}{EmployeeId}
 
         [HttpPost]
+        [Authorize]
         public ActionResult Associate(int id, int EmployeeId)
         {
+            GetApplicationCookie();
             Debug.WriteLine("Employee Id" + EmployeeId);
             Debug.WriteLine("Department Id" + id);
             //call to FindEmployee Function
@@ -193,8 +230,10 @@ namespace PassionProjectSummer2024.Controllers
         /// </example>
         //Get: Department/UnAssociate/{id}?EmployeeId={EmployeeId}
         [HttpGet]
+        [Authorize]
         public ActionResult UnAssociate(int id,int EmployeeId)
         {
+            GetApplicationCookie();
            // Debug.WriteLine("Employee Id" + EmployeeId);
             Debug.WriteLine("Employee Id" + EmployeeId);
             Debug.WriteLine("Department Id" + id);
@@ -226,8 +265,10 @@ namespace PassionProjectSummer2024.Controllers
         /// </returns>
 
         // GET: Department/Edit/5
+        [Authorize]
         public ActionResult Edit(int id)
         {
+           
             UpdateDepartment ViewModel= new UpdateDepartment();
             //the existing department information
             string url = "DepartmentData/FindDepartment/" + id;
@@ -267,9 +308,10 @@ namespace PassionProjectSummer2024.Controllers
 
         // POST: Department/Udate/5
         [HttpPost]
+        [Authorize]
         public ActionResult Update(int id, Department department)
         {
-
+            GetApplicationCookie();
             // Debug.WriteLine("Update function accessed");
             string url = "DepartmentData/UpdateDepartment/" + id;
             //Debug.WriteLine("id :" +id);
@@ -309,6 +351,7 @@ namespace PassionProjectSummer2024.Controllers
         /// </example>
 
         // GET: Department/DeleteConfirm/5
+        [Authorize]
         public ActionResult DeleteConfirm(int id)
         {
             string url = "DepartmentData/FindDepartment/" + id;
@@ -331,8 +374,10 @@ namespace PassionProjectSummer2024.Controllers
 
         // POST: Department/Delete/5
         [HttpPost]
+        [Authorize]
         public ActionResult Delete(int id)
         {
+            GetApplicationCookie();
             string url = "DepartmentData/DeleteDepartment/" + id;
             HttpContent content = new StringContent("");
             content.Headers.ContentType.MediaType = "application/json";
